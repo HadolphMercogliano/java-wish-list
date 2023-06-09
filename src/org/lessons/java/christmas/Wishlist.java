@@ -13,19 +13,21 @@ public class Wishlist {
     ArrayList<String> presents = new ArrayList<>();
     boolean stop = false;
     
-      do {
-        System.out.println("Inserisci il titolo del regalo (stop per fermarti): ");
-        String present = scanner.nextLine();
-        
-        switch (present) {
-          case "stop":
-            stop = true;
-            break;
-          default:
-            presents.add(present);
-        }
-        System.out.println("La lista contiene "+presents.size()+" regali");
-      } while (!stop);
+    do {
+      System.out.println("Inserisci il titolo del regalo (stop per fermarti): ");
+      String present = scanner.nextLine();
+      
+      switch (present) {
+        case "stop":
+          stop = true;
+          break;
+        default:
+          presents.add(present);
+      }
+      System.out.println("La lista contiene "+presents.size()+" regali");
+    } while (!stop);
+    
+    scanner.close();
     
     Collections.sort(presents);
 
