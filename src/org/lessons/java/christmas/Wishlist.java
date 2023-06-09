@@ -11,9 +11,11 @@ import java.io.IOException;
 
 public class Wishlist {
   
-  private final static String filePath = "wishlist.txt";
+  private final static String filePath = "src/org/lessons/java/christmas/wishlist.txt";
   
   public static void main(String[] args) {
+    ArrayList<String> presents = new ArrayList<>();
+    
     System.out.println("Lista regali di Natale");
     
 //    provo a leggere la lista se esistente.
@@ -25,6 +27,7 @@ public class Wishlist {
         String line = reader.nextLine();
 //        stampa la prossima riga
         System.out.println(line);
+        presents.add(line);
       }
     } catch (FileNotFoundException e) {
       System.out.println("Lista non trovata");
@@ -32,7 +35,6 @@ public class Wishlist {
     
     Scanner scanner = new Scanner(System.in);
     
-    ArrayList<String> presents = new ArrayList<>();
     boolean stop = false;
     
     do {
